@@ -1,11 +1,24 @@
 # Monatendard
 
-Monatendard는 **Monaspace Neon 1.400의 영문 윤곽을 가로 92.5%로 조정하고
-셀 너비를 0.595em으로 맞춘 뒤**, **Pretendard 1.3.9의 한글 글리프를 결합**한
-재현 가능한 코딩 글꼴 프로젝트입니다.
-한글 한 글자의 advance는 영문 두 칸과 정확히 같습니다.
+Monatendard는 **Monaspace Neon의 영문과 Pretendard의 한글을 결합하고**,
+한글 한 글자가 영문 두 글자의 너비와 정확히 맞도록 조정한 재현 가능한 코딩
+글꼴 프로젝트입니다.
 
 공식 소개·체험·다운로드: [monatendard.github.io](https://monatendard.github.io/)
+
+## Monaspace Neon Frozen 원본과 비교
+
+`윤곽`은 화면에 실제로 그려지는 글자 모양이고, `셀 너비`는 다음 글자가
+시작될 때까지 확보되는 고정폭 공간입니다.
+
+| 항목 | Monaspace Neon Frozen 원본 | Monatendard |
+|---|---:|---:|
+| 기준 좌표계 | `2000 units` | `2000 units` |
+| 영문 셀 너비 | `1240`, `0.620em` | `1190`, `0.595em` |
+| 일반 영문 윤곽 가로 배율 | 100% | 92.5% |
+| 영문 세로 배율 | 100% | 100% |
+| 한글·CJK 윤곽 배율 | 없음 | 최대 가로 112%, 세로 110% |
+| 한글 셀 너비 | 없음 | `2380`, 영문 두 글자의 너비 |
 
 일반 사용자는 공식 사이트의 `Monatendard-v*-Desktop.zip`만 내려받아 압축을 풀고
 `Install-Monatendard.ps1`을 실행하면 됩니다. Python, uv, Make는 필요하지 않습니다.
@@ -70,7 +83,7 @@ Git에는 포함되지 않습니다.
 
 `Makefile`은 개발자용 단축 명령일 뿐이며 사용자 설치 과정에는 필요하지 않습니다.
 
-## 고정 메타데이터
+## 고정 버전
 
 | 항목 | 값 |
 |---|---|
@@ -78,10 +91,6 @@ Git에는 포함되지 않습니다.
 | Monaspace Neon | 1.400 |
 | Pretendard | 1.3.9 |
 | Nerd Fonts Symbols Only | 3.4.0 |
-| 영문 윤곽 가로 배율 | 92.5% |
-| 영문 셀 너비 | 0.595em |
-| 한글·CJK 가로/세로 배율 | 112% / 110% |
-| 한글 advance | 영문 2칸 |
 
 원본 URL과 아카이브 SHA256은 `sources.lock.toml`이 유일한 기준입니다. 같은 잠금 파일과
 도구 버전으로 만든 결과의 바이트 재현성도 테스트합니다.

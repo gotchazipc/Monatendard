@@ -12,6 +12,20 @@ for mixed Korean and Latin code: every Hangul character occupies exactly two
 Latin cells, with spacing that stays readable without feeling unnecessarily
 wide.
 
+## Compared with the Monaspace Neon Frozen source
+
+An `outline` is the visible shape of a glyph. The `cell width` is the fixed
+space reserved before the next character begins.
+
+| Item | Monaspace Neon Frozen source | Monatendard |
+|---|---:|---:|
+| Coordinate system | `2000 units` | `2000 units` |
+| Latin cell width | `1240`, `0.620em` | `1190`, `0.595em` |
+| Standard Latin outline width | 100% | 92.5% |
+| Latin vertical scale | 100% | 100% |
+| Hangul/CJK outline scale | Not included | Up to 112% horizontal, 110% vertical |
+| Hangul cell width | Not included | `2380`, exactly two Latin character widths |
+
 <p align="center">
   <img src="assets/codex-cli-preview.png"
        alt="Monatendard Nerd Font Mono rendering aligned Korean, Latin, ligatures, and Nerd Font glyphs in Codex CLI"
@@ -24,8 +38,8 @@ wide.
 
 ## Highlights
 
-- Monaspace Neon 1.400 Latin outlines scaled to 92.5% in 0.595em cells
-- Pretendard 1.3.9 Korean glyphs with an exact 1:2 Latin-to-Hangul cell ratio
+- Built from pinned Monaspace Neon 1.400 and Pretendard 1.3.9 sources
+- Exact 1:2 Latin-to-Hangul cell alignment
 - Balanced Korean spacing for comfortable reading in code and comments
 - 14 styles across seven weights, with matching italics
 - Optional `Monatendard Nerd Font Mono` family for terminal icons
