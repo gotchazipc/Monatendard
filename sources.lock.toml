@@ -1,10 +1,10 @@
 [project]
-version = "0.2.2"
+version = "0.2.3"
 family = "Monatendard"
 latin_horizontal_scale = 0.925
-latin_advance_em = 0.595
-cjk_horizontal_scale = 1.12
-cjk_vertical_scale = 1.10
+latin_advance_em = 0.600
+cjk_horizontal_scale = 1.13
+cjk_vertical_scale = 1.11
 
 [sources.monaspace]
 name = "Monaspace Neon Frozen"

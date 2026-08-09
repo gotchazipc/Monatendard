@@ -14,11 +14,11 @@ Monatendard는 **Monaspace Neon의 영문과 Pretendard의 한글을 결합하�
 | 항목 | Monaspace Neon Frozen 원본 | Monatendard |
 |---|---:|---:|
 | 기준 좌표계 | `2000 units` | `2000 units` |
-| 영문 셀 너비 | `1240`, `0.620em` | `1190`, `0.595em` |
+| 영문 셀 너비 | `1240`, `0.620em` | `1200`, `0.600em` |
 | 일반 영문 윤곽 가로 배율 | 100% | 92.5% |
 | 영문 세로 배율 | 100% | 100% |
-| 한글·CJK 윤곽 배율 | 없음 | 최대 가로 112%, 세로 110% |
-| 한글 셀 너비 | 없음 | `2380`, 영문 두 글자의 너비 |
+| 한글·CJK 윤곽 배율 | 없음 | 최대 가로 113%, 세로 111% |
+| 한글 셀 너비 | 없음 | `2400`, 영문 두 글자의 너비 |
 
 일반 사용자는 공식 사이트의 `Monatendard-v*-Desktop.zip`만 내려받아 압축을 풀고
 `Install-Monatendard.ps1`을 실행하면 됩니다. Python, uv, Make는 필요하지 않습니다.
@@ -63,10 +63,10 @@ Git에는 포함되지 않습니다.
 ### Monatendard 생성 과정
 
 1. Monaspace Neon Frozen, Pretendard, Nerd Fonts 원본 버전을 고정하고 SHA256을 확인합니다.
-2. Monaspace 글리프 윤곽을 가로 92.5%로 조정하고 0.595em 영문 셀 안에 배치하되,
+2. Monaspace 글리프 윤곽을 가로 92.5%로 조정하고 0.600em 영문 셀 안에 배치하되,
    박스 드로잉·블록·Powerline 문자는 셀 경계가 이어지도록 맞춥니다. 이탤릭에서도
    연결 문자는 같은 굵기의 upright 윤곽을 사용합니다.
-3. Pretendard 한글·CJK 글리프를 가로 112%, 세로 110%로 조정해 영문 두 칸 셀에 병합합니다.
+3. Pretendard 한글·CJK 글리프를 가로 113%, 세로 111%로 조정해 영문 두 칸 셀에 병합합니다.
 4. Monatendard 패밀리명, 스타일, 고정폭, 버전 및 라이선스 정보를 설정합니다.
 5. 데스크톱용 TTF, 웹용 WOFF2 및 `@font-face` CSS를 생성합니다.
 6. 선택적으로 Nerd Fonts Symbols Only 아이콘을 영문 한 칸 너비로 병합합니다.
@@ -79,7 +79,7 @@ Git에는 포함되지 않습니다.
 - `monatendard build-nerd`: 일반판에 고정된 Nerd Fonts Symbols Only 아이콘을 병합합니다.
 - `monatendard verify`: 이름, 폭, 한글 글리프, 리게이처, 테이블 무결성을 확인합니다.
 - `monatendard verify --nerd`: Nerd 패밀리명, 필수 아이콘과 한 칸 폭을 추가 검사합니다.
-- `monatendard package --version 0.2.2`: Desktop/Desktop-Nerd/Web ZIP과 체크섬을 만듭니다.
+- `monatendard package --version 0.2.3`: Desktop/Desktop-Nerd/Web ZIP과 체크섬을 만듭니다.
 
 `Makefile`은 개발자용 단축 명령일 뿐이며 사용자 설치 과정에는 필요하지 않습니다.
 
@@ -87,7 +87,7 @@ Git에는 포함되지 않습니다.
 
 | 항목 | 값 |
 |---|---|
-| Monatendard | 0.2.2 |
+| Monatendard | 0.2.3 |
 | Monaspace Neon | 1.400 |
 | Pretendard | 1.3.9 |
 | Nerd Fonts Symbols Only | 3.4.0 |

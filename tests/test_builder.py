@@ -75,7 +75,7 @@ def test_non_connecting_ranges_are_not_selected(codepoint: int) -> None:
 
 
 def test_connecting_outline_keeps_source_overlap_at_target_cell_edges() -> None:
-    advance_scale = 1190 / 1240
+    advance_scale = 1200 / 1240
     target_advance, _, shift = _fit_latin_metrics(
         1240,
         -10,
@@ -85,6 +85,6 @@ def test_connecting_outline_keeps_source_overlap_at_target_cell_edges() -> None:
     transformed_xmin = -10 * advance_scale + shift
     transformed_xmax = 1250 * advance_scale + shift
 
-    assert target_advance == 1190
+    assert target_advance == 1200
     assert transformed_xmin < 0
     assert transformed_xmax > target_advance

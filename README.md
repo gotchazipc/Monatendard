@@ -20,11 +20,11 @@ space reserved before the next character begins.
 | Item | Monaspace Neon Frozen source | Monatendard |
 |---|---:|---:|
 | Coordinate system | `2000 units` | `2000 units` |
-| Latin cell width | `1240`, `0.620em` | `1190`, `0.595em` |
+| Latin cell width | `1240`, `0.620em` | `1200`, `0.600em` |
 | Standard Latin outline width | 100% | 92.5% |
 | Latin vertical scale | 100% | 100% |
-| Hangul/CJK outline scale | Not included | Up to 112% horizontal, 110% vertical |
-| Hangul cell width | Not included | `2380`, exactly two Latin character widths |
+| Hangul/CJK outline scale | Not included | Up to 113% horizontal, 111% vertical |
+| Hangul cell width | Not included | `2400`, exactly two Latin character widths |
 
 <p align="center">
   <img src="assets/codex-cli-preview.png"
@@ -97,10 +97,10 @@ uv run monatendard verify --nerd --reproducible
 1. Pin the Monaspace Neon Frozen, Pretendard, and Nerd Fonts sources and verify
    their SHA256 checksums.
 2. Scale the Monaspace glyph outlines horizontally to 92.5% and center them in
-   0.595em Latin cells, while fitting box-drawing, block, and Powerline glyphs
+   0.600em Latin cells, while fitting box-drawing, block, and Powerline glyphs
    to the cell edges so adjacent strokes remain continuous. Italic variants use
    the matching upright outlines for these connecting glyphs.
-3. Scale Pretendard Hangul and CJK glyphs to 112% horizontally and 110%
+3. Scale Pretendard Hangul and CJK glyphs to 113% horizontally and 111%
    vertically, then merge them into cells exactly twice the Latin width.
 4. Set the Monatendard family, style, fixed-pitch, version, and license
    metadata.
