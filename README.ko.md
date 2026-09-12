@@ -29,12 +29,42 @@ Oh My Posh 같은 터미널 아이콘이 필요하면 일반판 대신
 
 ## 일반 사용자 설치
 
+### Windows
+
 1. [공식 사이트](https://monatendard.github.io/#download)의 Desktop ZIP을 내려받아 압축을 풉니다.
 2. PowerShell에서 `Install-Monatendard.ps1`을 실행합니다.
 3. 사용 중인 편집기나 터미널을 다시 시작하고 글꼴을 `Monatendard`로 선택합니다.
 4. 제거할 때는 같은 폴더의 `Uninstall-Monatendard.ps1`을 실행합니다.
 
 스크립트는 관리자 권한 없이 현재 사용자 영역에 설치합니다.
+
+### macOS (Homebrew)
+
+이 저장소를 Homebrew tap으로 추가한 다음, 필요한 패키지를 설치합니다.
+
+```sh
+brew tap younjungpark/monatendard https://github.com/younjungpark/Monatendard.git
+# 일반판: 편집기와 일반 애플리케이션용
+brew install --cask younjungpark/monatendard/font-monatendard
+# Nerd판: 아이콘을 사용하는 터미널용
+brew install --cask younjungpark/monatendard/font-monatendard-nerd-font
+```
+
+각 패키지는 공식 릴리스의 TTF 14종을 `~/Library/Fonts`에 설치합니다.
+폰트 빌드나 PowerShell 실행은 필요하지 않습니다. 두 패밀리는 함께 설치할 수 있습니다.
+편집기나 터미널을 다시 시작하고 `Monatendard` 또는 `Monatendard Nerd Font Mono`를 선택하세요.
+
+업그레이드와 제거는 다음 명령을 사용합니다. 하나만 설치했다면 해당 패키지 이름만 지정합니다.
+
+```sh
+brew update
+brew upgrade --cask younjungpark/monatendard/font-monatendard younjungpark/monatendard/font-monatendard-nerd-font
+brew uninstall --cask younjungpark/monatendard/font-monatendard younjungpark/monatendard/font-monatendard-nerd-font
+```
+
+정식 릴리스 후 macOS Actions가 Cask 갱신·검증 PR을 만듭니다.
+해당 PR이 병합되면 Homebrew에서도 업그레이드할 수 있습니다.
+유지보수 절차는 [homebrew.md](packaging/homebrew.md)를 참고하세요.
 
 ## 개발자 빌드
 
