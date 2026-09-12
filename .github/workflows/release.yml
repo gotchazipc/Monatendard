@@ -11,10 +11,13 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   build-release:
     runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.version.outputs.value }}
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6
@@ -49,3 +52,10 @@ jobs:
           files: |
             dist/Monatendard-*.zip
             dist/SHA256SUMS.txt
+
+  update-font-casks:
+    needs: build-release
+    if: github.event_name == 'push' && !contains(github.ref_name, '-')
+    uses: ./.github/workflows/update-font-casks.yml
+    with:
+      tag: v${{ needs.build-release.outputs.version }}

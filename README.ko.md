@@ -29,12 +29,44 @@ Oh My Posh 같은 터미널 아이콘이 필요하면 일반판 대신
 
 ## 일반 사용자 설치
 
+### Windows
+
 1. [공식 사이트](https://monatendard.github.io/#download)의 Desktop ZIP을 내려받아 압축을 풉니다.
 2. PowerShell에서 `Install-Monatendard.ps1`을 실행합니다.
 3. 사용 중인 편집기나 터미널을 다시 시작하고 글꼴을 `Monatendard`로 선택합니다.
 4. 제거할 때는 같은 폴더의 `Uninstall-Monatendard.ps1`을 실행합니다.
 
 스크립트는 관리자 권한 없이 현재 사용자 영역에 설치합니다.
+
+### macOS (Homebrew)
+
+Homebrew에서 필요한 글꼴을 설치하세요. 일반판과 Nerd판을 함께 설치해도 됩니다.
+
+```sh
+brew tap younjungpark/monatendard https://github.com/younjungpark/Monatendard.git
+# 일반판
+brew install --cask younjungpark/monatendard/font-monatendard
+# 터미널 아이콘이 포함된 Nerd판
+brew install --cask younjungpark/monatendard/font-monatendard-nerd-font
+```
+
+설치 후 편집기나 터미널을 다시 시작하고, 글꼴 설정에서 `Monatendard` 또는
+`Monatendard Nerd Font Mono`를 선택하세요. 각 패키지에는 굵기 7종과 이탤릭을 포함한
+TTF 14개가 들어 있습니다.
+
+새 버전으로 업그레이드하려면 다음 명령을 실행하세요.
+하나만 설치했다면 해당 패키지 이름만 지정하면 됩니다.
+
+```sh
+brew update
+brew upgrade --cask font-monatendard font-monatendard-nerd-font
+```
+
+글꼴을 제거하려면 다음 명령을 사용하세요.
+
+```sh
+brew uninstall --cask font-monatendard font-monatendard-nerd-font
+```
 
 ## 개발자 빌드
 

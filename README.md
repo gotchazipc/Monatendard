@@ -62,6 +62,36 @@ For Windows:
 The installer works per user and does not require administrator privileges.
 Matching uninstall scripts are included in each package.
 
+### macOS (Homebrew)
+
+Install either or both font families with Homebrew:
+
+```sh
+brew tap younjungpark/monatendard https://github.com/younjungpark/Monatendard.git
+# Standard family
+brew install --cask younjungpark/monatendard/font-monatendard
+# Nerd family with terminal icons
+brew install --cask younjungpark/monatendard/font-monatendard-nerd-font
+```
+
+Restart your editor or terminal, then select `Monatendard` or
+`Monatendard Nerd Font Mono` in its font settings. Each package includes
+14 TTF styles: seven weights with matching italics.
+
+To upgrade, run the following commands. If you installed only one family,
+include only its package name.
+
+```sh
+brew update
+brew upgrade --cask font-monatendard font-monatendard-nerd-font
+```
+
+To remove the fonts:
+
+```sh
+brew uninstall --cask font-monatendard font-monatendard-nerd-font
+```
+
 ### VS Code
 
 Open **Settings (JSON)** and add:
@@ -75,8 +105,7 @@ Open **Settings (JSON)** and add:
 
 Restart VS Code after installing the font.
 
-TTF files can also be installed manually on macOS and Linux. Automated
-installers for those platforms are planned for a future release.
+TTF files can also be installed manually on macOS and Linux.
 
 ## Build from source
 
