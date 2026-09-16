@@ -42,6 +42,8 @@ def test_update_and_no_change(release_files):
     assert len(updates) == 2
     for path, content in updates.items():
         assert 'version "0.2.3"' in content
+        assert 'url "https://github.com/younjungpark/Monatendard/releases/download/' in content
+        assert "verified:" not in content
         assert 'version "0.2.2"' in path.read_text()  # 검증 중에는 파일을 쓰지 않음
         path.write_text(content)
     assert prepare(release_files)[1] == updates

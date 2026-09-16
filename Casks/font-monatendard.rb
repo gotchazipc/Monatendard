@@ -2,8 +2,7 @@ cask "font-monatendard" do
   version "0.2.3"
   sha256 "932cd25697e3f41fea4d2b32f1ce437d44ff4f8e0c711cb0962dc03130b1eaba"
 
-  url "https://github.com/younjungpark/Monatendard/releases/download/v#{version}/Monatendard-v#{version}-Desktop.zip",
-      verified: "github.com/younjungpark/Monatendard/"
+  url "https://github.com/younjungpark/Monatendard/releases/download/v#{version}/Monatendard-v#{version}-Desktop.zip"
   name "Monatendard"
   desc "Korean coding font combining Monaspace Neon and Pretendard"
   homepage "https://monatendard.github.io/"

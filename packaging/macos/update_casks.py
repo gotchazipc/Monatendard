@@ -58,11 +58,10 @@ def prepare_updates(root, repository, release, archive_dir):
             (r'^  version "[^"]+"$', f'  version "{version}"'),
             (r'^  sha256 "[^"]+"$', f'  sha256 "{actual}"'),
             (
-                r'^  url "[^"]+",$',
+                r'^  url "[^"]+"$',
                 f'  url "https://github.com/{repository}/releases/download/v#{{version}}/'
-                f'Monatendard-v#{{version}}-{kind}.zip",',
+                f'Monatendard-v#{{version}}-{kind}.zip"',
             ),
-            (r'^      verified: "[^"]+"$', f'      verified: "github.com/{repository}/"'),
         ]
         for pattern, replacement in substitutions:
             content, count = re.subn(
